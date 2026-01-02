@@ -12,6 +12,9 @@ const config = defineConfig({
     devtools(),
     nitro({
       preset: 'vercel',
+      externals: {
+        inline: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
+      },
     }),
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
